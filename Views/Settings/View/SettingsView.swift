@@ -8,17 +8,13 @@ import SwiftUI
 import SUIFontPicker
 
 struct SettingsView: View {
+    @EnvironmentObject var settingsViewModel: SettingsViewModel
     @EnvironmentObject var fontState: FontState
     @EnvironmentObject var statusBarState: StatusBarState
     @EnvironmentObject var sharedState: SharedState
-    @State private var textInput: String = ""
-    @State private var isFontPickerPresented = false
-    @State private var isAutoOpenWhenChargingAlertPresented = false
-
-    @Environment(\.openURL) var openURL
     
     var body: some View {
-        Form {
+        Form{
             Section(header: Text("Display Settings")) {
                 Toggle(isOn: Binding(
                     get: { statusBarState.showStatusBar },
@@ -86,26 +82,26 @@ struct SettingsView: View {
                 
             }
             Section(header: Text("Note")) {
-                TextField("Note", text: $textInput)
-                    .onChange(of: textInput) { oldValue, newValue in
+                TextField("Note", text: $settingsViewModel.textInput)
+                    .onChange(of: settingsViewModel.textInput) { oldValue, newValue in
                         print(newValue)
                         sharedState.note = newValue
                         UserDefaults.standard.set(newValue, forKey: Constants.UserDefaultsKeys.note)
                     }
                     .onAppear(perform: {
-                        textInput = sharedState.note
+                        settingsViewModel.textInput = sharedState.note
                     })
             }
             Section(header: Text("Fonts")) {
                 Button(action: {
-                    isFontPickerPresented = true
+                    settingsViewModel.isFontPickerPresented = true
                 }, label: {
                     Text("Change font")
                 })
-                .sheet(isPresented: $isFontPickerPresented) {
+                .sheet(isPresented: $settingsViewModel.isFontPickerPresented) {
                     HStack {
                         Spacer()
-                        Button(action: {isFontPickerPresented = false}, label: {
+                        Button(action: {settingsViewModel.isFontPickerPresented = false}, label: {
                             Text("Close")
                         }).padding()
                     }
@@ -131,21 +127,21 @@ struct SettingsView: View {
             
             Section(header: Text("Tips")) {
                 Button(action: {
-                    isAutoOpenWhenChargingAlertPresented = true
+                    settingsViewModel.isAutoOpenWhenChargingAlertPresented = true
                 }, label: {
                     Text("Automatically open the app when charger plugged")
                 })
-                .alert(isPresented: $isAutoOpenWhenChargingAlertPresented, content: {
+                .alert(isPresented: $settingsViewModel.isAutoOpenWhenChargingAlertPresented, content: {
                     Alert(title: Text("Instructions"), message: Text(LocalizedStringKey("1- Open Shortcuts App -> Automation\n2- New Automation\n3- Press on 'Charger' -> Run Immediately\n4- New blank automation\n5- Find and press 'Open App'\n6-Press on 'App' and choose Desk Fella\nNow Desk Fella will open each time you put your phone to charge.")),  primaryButton: .default(
                         Text("OK"),
                         action: {
-                            isAutoOpenWhenChargingAlertPresented = false
+                            settingsViewModel.isAutoOpenWhenChargingAlertPresented = false
                         }
                     ),
                           secondaryButton:.default(
                             Text("Video Instructions"),
                             action: {
-                                openURL(URL(string: "https://www.youtube.com/shorts/uZEo5O-tYrs")!)
+                                settingsViewModel.openURL(URL(string: "https://www.youtube.com/shorts/uZEo5O-tYrs")!)
                             }
                           )
                     )
@@ -160,7 +156,9 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
+        .environmentObject(SettingsViewModel.init())
         .environmentObject(SharedState.init())
         .environmentObject(FontState.init())
         .environmentObject(StatusBarState.init())
+    
 }

@@ -21,6 +21,7 @@ class SharedState: ObservableObject {
 }
 
 struct ContentView: View {
+    @ObservedObject var settingsViewModel = SettingsViewModel()
     @EnvironmentObject var fontState: FontState
     @EnvironmentObject var statusBarState: StatusBarState
     @StateObject var sharedState = SharedState()
@@ -31,45 +32,11 @@ struct ContentView: View {
     @State private var timer: Timer? = nil
     @State private var currentDelta: CGFloat = 0.0
     @State private var previousDelta: CGFloat = 0.0
-    
     @State private var clockStyle: ClockStyle = .classic
-    
     @State private var path = NavigationPath()
     
-    func getHourFormatter() -> DateFormatter {
-        let formatter = DateFormatter()
-        
-        if sharedState.showHour {
-            formatter.dateFormat += "HH:"
-        }
-        if sharedState.showMinute {
-            formatter.dateFormat += "mm:"
-        }
-        if sharedState.showSeconds {
-            formatter.dateFormat += "ss"
-        }
-        
-        if formatter.dateFormat.hasSuffix(":") {
-            formatter.dateFormat.removeLast()
-        }
-        
-        return formatter
-    }
-    
-    let dateFormatter : DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM dd"
-        return formatter
-    }()
-    
-    let numberFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 2
-        return formatter
-    }()
-    
+    private var dateFormatter = DateFormatter()
+    private var numberFormatter = NumberFormatter()
     
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
@@ -103,7 +70,7 @@ struct ContentView: View {
                         if sharedState.showAnalogClock {
                             AnalogClockView().frame(width: 200, height: 200)
                         } else {
-                            Text(getHourFormatter().string(from: currentDate)).foregroundStyle(.gray).font(.custom(fontState.font, size: 72)).onAppear {
+                            Text(dateFormatter.hour(showHour: sharedState.showHour, showMinute: sharedState.showMinute, showSeconds: sharedState.showSeconds).string(from: currentDate)).foregroundStyle(.gray).font(.custom(fontState.font, size: 72)).onAppear {
                                 let _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
                                     currentDate = Date()
                                 }
@@ -111,11 +78,11 @@ struct ContentView: View {
                         }
                         
                         if sharedState.showDate {
-                            Text(dateFormatter.string(from: currentDate)).foregroundStyle(.gray).font(.custom(fontState.font, size: 24))
+                            Text(dateFormatter.MMMMdd().string(from: currentDate)).foregroundStyle(.gray).font(.custom(fontState.font, size: 24))
                         }
                         if sharedState.showCharging {
                             VStack {
-                                Text("\(numberFormatter.string(from: NSNumber(value: batteryLevel))!)% Charged").foregroundStyle(.gray).onAppear {
+                                Text("\(numberFormatter.chargeFormatter().string(from: NSNumber(value: batteryLevel))!)% Charged").foregroundStyle(.gray).onAppear {
                                     getBatteryLevel()
                                     let _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
                                         getBatteryLevel()
@@ -164,12 +131,13 @@ struct ContentView: View {
                     })
                 ).navigationDestination(for: SettingsNavigation.self, destination: { destination in
                     SettingsView()
+                        .environmentObject(settingsViewModel)
+                        .environmentObject(sharedState)
+                        .environmentObject(fontState)
+                        .environmentObject(statusBarState)
                 })
         }.statusBar(hidden: !statusBarState.showStatusBar)
             .persistentSystemOverlays(!statusBarState.showStatusBar ? .hidden : .visible)
-            .environmentObject(sharedState)
-            .environmentObject(fontState)
-        
     }
     
     
@@ -183,6 +151,7 @@ struct ContentView: View {
         .environmentObject(SharedState.init())
         .environmentObject(FontState.init())
         .environmentObject(StatusBarState.init())
+        .environmentObject(SettingsViewModel.init())
 }
 
 struct SettingsNavigation: Hashable {}

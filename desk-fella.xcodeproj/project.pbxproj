@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01747D72B40509500822FFA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01747D62B40509500822FFA /* DateFormatter.swift */; };
+		E01747D92B40528300822FFA /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01747D82B40528300822FFA /* NumberFormatter.swift */; };
+		E01747E32B40CFD100822FFA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01747E22B40CFD100822FFA /* SettingsViewModel.swift */; };
 		E07303552B2C90D500D87A42 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07303542B2C90D500D87A42 /* Constants.swift */; };
 		E07303582B2CAD9400D87A42 /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07303572B2CAD9400D87A42 /* AnalogClockView.swift */; };
 		E073035B2B2CAFDA00D87A42 /* ClukUI in Frameworks */ = {isa = PBXBuildFile; productRef = E073035A2B2CAFDA00D87A42 /* ClukUI */; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		E008EFAD2B38B5BB0099572D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E01747D62B40509500822FFA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		E01747D82B40528300822FFA /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		E01747E22B40CFD100822FFA /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		E07303542B2C90D500D87A42 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E07303572B2CAD9400D87A42 /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
 		E073035C2B2CDC3000D87A42 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -84,6 +90,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E01747D52B40507C00822FFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E01747D62B40509500822FFA /* DateFormatter.swift */,
+				E01747D82B40528300822FFA /* NumberFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E01747DA2B40CEE600822FFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E01747DE2B40CFA000822FFA /* Settings */,
+				E07303572B2CAD9400D87A42 /* AnalogClockView.swift */,
+				E0D26C3D2B2A031B0013F6AE /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E01747DE2B40CFA000822FFA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E01747E12B40CFAF00822FFA /* ViewModel */,
+				E01747E02B40CFA900822FFA /* Model */,
+				E01747DF2B40CFA500822FFA /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E01747DF2B40CFA500822FFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E073035C2B2CDC3000D87A42 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E01747E02B40CFA900822FFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E01747E12B40CFAF00822FFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E01747E22B40CFD100822FFA /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E07303562B2C910600D87A42 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +153,8 @@
 		E0D26C2F2B2A031B0013F6AE = {
 			isa = PBXGroup;
 			children = (
+				E01747DA2B40CEE600822FFA /* Views */,
+				E01747D52B40507C00822FFA /* Extensions */,
 				E0D26C3A2B2A031B0013F6AE /* desk-fella */,
 				E0D26C4B2B2A031D0013F6AE /* desk-fellaTests */,
 				E0D26C552B2A031D0013F6AE /* desk-fellaUITests */,
@@ -115,13 +175,10 @@
 		E0D26C3A2B2A031B0013F6AE /* desk-fella */ = {
 			isa = PBXGroup;
 			children = (
-				E073035C2B2CDC3000D87A42 /* SettingsView.swift */,
 				E07303562B2C910600D87A42 /* Constants */,
 				E0D26C3B2B2A031B0013F6AE /* DeskFellaApp.swift */,
-				E0D26C3D2B2A031B0013F6AE /* ContentView.swift */,
 				E0D26C3F2B2A031C0013F6AE /* Assets.xcassets */,
 				E0D26C412B2A031C0013F6AE /* Preview Content */,
-				E07303572B2CAD9400D87A42 /* AnalogClockView.swift */,
 			);
 			path = "desk-fella";
 			sourceTree = "<group>";
@@ -292,11 +349,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01747D72B40509500822FFA /* DateFormatter.swift in Sources */,
 				E073035D2B2CDC3000D87A42 /* SettingsView.swift in Sources */,
 				E0D26C3E2B2A031B0013F6AE /* ContentView.swift in Sources */,
 				E0D26C3C2B2A031B0013F6AE /* DeskFellaApp.swift in Sources */,
 				E07303552B2C90D500D87A42 /* Constants.swift in Sources */,
+				E01747D92B40528300822FFA /* NumberFormatter.swift in Sources */,
 				E07303582B2CAD9400D87A42 /* AnalogClockView.swift in Sources */,
+				E01747E32B40CFD100822FFA /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
