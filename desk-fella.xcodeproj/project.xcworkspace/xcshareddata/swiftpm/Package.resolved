@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "clukui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PierreJanineh-com/ClukUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3d8dba17f6dcb2a19229e67bc23a8fac8e912fbe"
+      }
+    },
+    {
+      "identity" : "suifontpicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwapnanilDhol/SUIFontPicker",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f478501398447855b5f6688b8bb042a4e5bda56e"
+      }
+    },
+    {
+      "identity" : "swift-snapshot-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-snapshot-testing.git",
+      "state" : {
+        "revision" : "59b663f68e69f27a87b45de48cb63264b8194605",
+        "version" : "1.15.1"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "6ad4ea24b01559dde0773e3d091f1b9e36175036",
+        "version" : "509.0.2"
+      }
+    },
+    {
+      "identity" : "swiftclockui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/renaudjenny/SwiftClockUI",
+      "state" : {
+        "revision" : "b4977887fcfd42201a709357076e3f111ff23c97",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
