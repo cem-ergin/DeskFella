@@ -7,25 +7,22 @@
 
 import SwiftUI
 
-class FontState: ObservableObject {
-    @Published var font: String = UserDefaults.standard.string(forKey: Constants.UserDefaultsKeys.font) ?? "Verdana"
-}
-
-class StatusBarState: ObservableObject {
-    @Published var showStatusBar: Bool = UserDefaults.standard.object(forKey: Constants.UserDefaultsKeys.showStatusBar) == nil ? false :UserDefaults.standard.bool(forKey: Constants.UserDefaultsKeys.showStatusBar)
-}
-
 @main
 struct desk_fellaApp: App {
-    @StateObject var fontState = FontState()
-    @StateObject var statusBarState = StatusBarState()
-
+    @StateObject var fontViewModel = FontViewModel()
+    @StateObject var statusBarViewModel = StatusBarViewModel()
+    
+    init() {
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        UIApplication.shared.isIdleTimerDisabled = true
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .statusBar(hidden: !statusBarState.showStatusBar)
-        }.environment(\.font, Font.custom(fontState.font, size: 14))
-            .environmentObject(fontState)
-            .environmentObject(statusBarState)
+            HomeView()
+                .statusBar(hidden: !statusBarViewModel.showStatusBar)
+        }.environment(\.font, Font.custom(fontViewModel.font, size: 14))
+            .environmentObject(fontViewModel)
+            .environmentObject(statusBarViewModel)
     }
 }

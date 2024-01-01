@@ -1,20 +1,7 @@
 import SwiftUI
 
 struct AnalogClockView: View {
-    @State private var currentTime = Date()
-    
-    private var timer: Timer {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            let seconds = Double(Calendar.current.component(.second, from: currentTime))
-            if seconds != 59 {
-                withAnimation {
-                    currentTime = Date()
-                }
-            } else {
-                currentTime = Date()
-            }
-        }
-    }
+    @StateObject private var analogClockViewModel = AnalogClockViewModel()
     
     var body: some View {
         GeometryReader { geometry in
@@ -39,19 +26,19 @@ struct AnalogClockView: View {
                     .fill(Color.black)
                     .frame(width: 2, height: geometry.size.width / 2 - 20)
                     .offset(y: -geometry.size.width / 4 + 10)
-                    .rotationEffect(.degrees((Double(Calendar.current.component(.hour, from: currentTime)) * 30.0) + Double(Calendar.current.component(.minute, from: currentTime)) / 2))
+                    .rotationEffect(.degrees((Double(Calendar.current.component(.hour, from: analogClockViewModel.currentTime)) * 30.0) + Double(Calendar.current.component(.minute, from: analogClockViewModel.currentTime)) / 2))
                 
                 Rectangle()
                     .fill(Color.black)
                     .frame(width: 1, height: geometry.size.width / 2 - 10)
                     .offset(y: -geometry.size.width / 4 + 10)
-                    .rotationEffect(.degrees(Double(Calendar.current.component(.minute, from: currentTime)) * 6.0 + Double(Calendar.current.component(.second, from: currentTime)) / 10))
+                    .rotationEffect(.degrees(Double(Calendar.current.component(.minute, from: analogClockViewModel.currentTime)) * 6.0 + Double(Calendar.current.component(.second, from: analogClockViewModel.currentTime)) / 10))
                 
                 Rectangle()
                     .fill(Color.black)
                     .frame(width: 0.5, height: geometry.size.width / 2 - 10)
                     .offset(y: -geometry.size.width / 4 + 10)
-                    .rotationEffect(.degrees(Double(Calendar.current.component(.second, from: currentTime)) * 6.0))
+                    .rotationEffect(.degrees(Double(Calendar.current.component(.second, from: analogClockViewModel.currentTime)) * 6.0))
                     .animation(.linear, value: 1)
                 
                 Circle()
@@ -60,7 +47,7 @@ struct AnalogClockView: View {
             }
         }
         .onAppear(perform: {
-            RunLoop.current.add(timer, forMode: .common)
+            RunLoop.current.add(analogClockViewModel.timer, forMode: .common)
         })
     }
 }

@@ -10,6 +10,27 @@
 		E01747D72B40509500822FFA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01747D62B40509500822FFA /* DateFormatter.swift */; };
 		E01747D92B40528300822FFA /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01747D82B40528300822FFA /* NumberFormatter.swift */; };
 		E01747E32B40CFD100822FFA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01747E22B40CFD100822FFA /* SettingsViewModel.swift */; };
+		E05AA0C72B41FB1E006ACDD8 /* ShowChargingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0C62B41FB1E006ACDD8 /* ShowChargingView.swift */; };
+		E05AA0C92B41FD9E006ACDD8 /* ShowDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0C82B41FD9E006ACDD8 /* ShowDateView.swift */; };
+		E05AA0CB2B41FDD7006ACDD8 /* ShowSecondsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0CA2B41FDD7006ACDD8 /* ShowSecondsView.swift */; };
+		E05AA0CD2B41FDFB006ACDD8 /* ShowMinuteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0CC2B41FDFB006ACDD8 /* ShowMinuteView.swift */; };
+		E05AA0CF2B41FE3C006ACDD8 /* ShowHourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0CE2B41FE3C006ACDD8 /* ShowHourView.swift */; };
+		E05AA0D12B41FE5E006ACDD8 /* ShowAnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0D02B41FE5E006ACDD8 /* ShowAnalogClockView.swift */; };
+		E05AA0D32B41FEAA006ACDD8 /* ShowStatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0D22B41FEAA006ACDD8 /* ShowStatusBarView.swift */; };
+		E05AA0D52B41FEE6006ACDD8 /* EditNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0D42B41FEE6006ACDD8 /* EditNoteView.swift */; };
+		E05AA0D72B41FF2B006ACDD8 /* ChangeFontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0D62B41FF2B006ACDD8 /* ChangeFontView.swift */; };
+		E05AA0D92B41FF8E006ACDD8 /* DiscordInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0D82B41FF8E006ACDD8 /* DiscordInvitationView.swift */; };
+		E05AA0DB2B41FFC2006ACDD8 /* AutomationInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0DA2B41FFC2006ACDD8 /* AutomationInstructionView.swift */; };
+		E05AA0E32B422535006ACDD8 /* DisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0E22B422535006ACDD8 /* DisplayViewModel.swift */; };
+		E05AA0E52B42EE0C006ACDD8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0E42B42EE0C006ACDD8 /* HomeViewModel.swift */; };
+		E05AA0E92B42EFEE006ACDD8 /* FontViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0E82B42EFEE006ACDD8 /* FontViewModel.swift */; };
+		E05AA0EB2B42F014006ACDD8 /* StatusBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0EA2B42F014006ACDD8 /* StatusBarViewModel.swift */; };
+		E05AA0ED2B42F0CA006ACDD8 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0EC2B42F0CA006ACDD8 /* SettingsButtonView.swift */; };
+		E05AA0EF2B42F846006ACDD8 /* ChargingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0EE2B42F846006ACDD8 /* ChargingView.swift */; };
+		E05AA0F12B42F8CE006ACDD8 /* TextClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0F02B42F8CE006ACDD8 /* TextClockView.swift */; };
+		E05AA0F32B42F932006ACDD8 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0F22B42F932006ACDD8 /* DateView.swift */; };
+		E05AA0F52B42F9C3006ACDD8 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0F42B42F9C3006ACDD8 /* NoteView.swift */; };
+		E05AA0FD2B430516006ACDD8 /* AnalogClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05AA0FC2B430516006ACDD8 /* AnalogClockViewModel.swift */; };
 		E07303552B2C90D500D87A42 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07303542B2C90D500D87A42 /* Constants.swift */; };
 		E07303582B2CAD9400D87A42 /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07303572B2CAD9400D87A42 /* AnalogClockView.swift */; };
 		E073035B2B2CAFDA00D87A42 /* ClukUI in Frameworks */ = {isa = PBXBuildFile; productRef = E073035A2B2CAFDA00D87A42 /* ClukUI */; };
@@ -17,7 +38,7 @@
 		E07303602B2CEA2F00D87A42 /* SUIFontPicker in Frameworks */ = {isa = PBXBuildFile; productRef = E073035F2B2CEA2F00D87A42 /* SUIFontPicker */; };
 		E0C579BD2B2DDFBB00B6D409 /* SwiftClockUI in Frameworks */ = {isa = PBXBuildFile; productRef = E0C579BC2B2DDFBB00B6D409 /* SwiftClockUI */; };
 		E0D26C3C2B2A031B0013F6AE /* DeskFellaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D26C3B2B2A031B0013F6AE /* DeskFellaApp.swift */; };
-		E0D26C3E2B2A031B0013F6AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D26C3D2B2A031B0013F6AE /* ContentView.swift */; };
+		E0D26C3E2B2A031B0013F6AE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D26C3D2B2A031B0013F6AE /* HomeView.swift */; };
 		E0D26C402B2A031C0013F6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D26C3F2B2A031C0013F6AE /* Assets.xcassets */; };
 		E0D26C432B2A031C0013F6AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D26C422B2A031C0013F6AE /* Preview Assets.xcassets */; };
 		E0D26C4D2B2A031D0013F6AE /* desk_fellaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D26C4C2B2A031D0013F6AE /* desk_fellaTests.swift */; };
@@ -47,12 +68,33 @@
 		E01747D62B40509500822FFA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		E01747D82B40528300822FFA /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		E01747E22B40CFD100822FFA /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		E05AA0C62B41FB1E006ACDD8 /* ShowChargingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowChargingView.swift; sourceTree = "<group>"; };
+		E05AA0C82B41FD9E006ACDD8 /* ShowDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDateView.swift; sourceTree = "<group>"; };
+		E05AA0CA2B41FDD7006ACDD8 /* ShowSecondsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSecondsView.swift; sourceTree = "<group>"; };
+		E05AA0CC2B41FDFB006ACDD8 /* ShowMinuteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMinuteView.swift; sourceTree = "<group>"; };
+		E05AA0CE2B41FE3C006ACDD8 /* ShowHourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHourView.swift; sourceTree = "<group>"; };
+		E05AA0D02B41FE5E006ACDD8 /* ShowAnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAnalogClockView.swift; sourceTree = "<group>"; };
+		E05AA0D22B41FEAA006ACDD8 /* ShowStatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStatusBarView.swift; sourceTree = "<group>"; };
+		E05AA0D42B41FEE6006ACDD8 /* EditNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteView.swift; sourceTree = "<group>"; };
+		E05AA0D62B41FF2B006ACDD8 /* ChangeFontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFontView.swift; sourceTree = "<group>"; };
+		E05AA0D82B41FF8E006ACDD8 /* DiscordInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordInvitationView.swift; sourceTree = "<group>"; };
+		E05AA0DA2B41FFC2006ACDD8 /* AutomationInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationInstructionView.swift; sourceTree = "<group>"; };
+		E05AA0E22B422535006ACDD8 /* DisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewModel.swift; sourceTree = "<group>"; };
+		E05AA0E42B42EE0C006ACDD8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E05AA0E82B42EFEE006ACDD8 /* FontViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewModel.swift; sourceTree = "<group>"; };
+		E05AA0EA2B42F014006ACDD8 /* StatusBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarViewModel.swift; sourceTree = "<group>"; };
+		E05AA0EC2B42F0CA006ACDD8 /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
+		E05AA0EE2B42F846006ACDD8 /* ChargingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingView.swift; sourceTree = "<group>"; };
+		E05AA0F02B42F8CE006ACDD8 /* TextClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextClockView.swift; sourceTree = "<group>"; };
+		E05AA0F22B42F932006ACDD8 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		E05AA0F42B42F9C3006ACDD8 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		E05AA0FC2B430516006ACDD8 /* AnalogClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockViewModel.swift; sourceTree = "<group>"; };
 		E07303542B2C90D500D87A42 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E07303572B2CAD9400D87A42 /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
 		E073035C2B2CDC3000D87A42 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E0D26C382B2A031B0013F6AE /* desk-fella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desk-fella.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D26C3B2B2A031B0013F6AE /* DeskFellaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskFellaApp.swift; sourceTree = "<group>"; };
-		E0D26C3D2B2A031B0013F6AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E0D26C3D2B2A031B0013F6AE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E0D26C3F2B2A031C0013F6AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0D26C422B2A031C0013F6AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E0D26C482B2A031D0013F6AE /* desk-fellaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "desk-fellaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,9 +144,9 @@
 		E01747DA2B40CEE600822FFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E05AA0F82B43046A006ACDD8 /* AnalogClock */,
+				E05AA0DE2B4224EB006ACDD8 /* Home */,
 				E01747DE2B40CFA000822FFA /* Settings */,
-				E07303572B2CAD9400D87A42 /* AnalogClockView.swift */,
-				E0D26C3D2B2A031B0013F6AE /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +165,17 @@
 			isa = PBXGroup;
 			children = (
 				E073035C2B2CDC3000D87A42 /* SettingsView.swift */,
+				E05AA0C62B41FB1E006ACDD8 /* ShowChargingView.swift */,
+				E05AA0C82B41FD9E006ACDD8 /* ShowDateView.swift */,
+				E05AA0CA2B41FDD7006ACDD8 /* ShowSecondsView.swift */,
+				E05AA0CC2B41FDFB006ACDD8 /* ShowMinuteView.swift */,
+				E05AA0CE2B41FE3C006ACDD8 /* ShowHourView.swift */,
+				E05AA0D02B41FE5E006ACDD8 /* ShowAnalogClockView.swift */,
+				E05AA0D22B41FEAA006ACDD8 /* ShowStatusBarView.swift */,
+				E05AA0D42B41FEE6006ACDD8 /* EditNoteView.swift */,
+				E05AA0D62B41FF2B006ACDD8 /* ChangeFontView.swift */,
+				E05AA0D82B41FF8E006ACDD8 /* DiscordInvitationView.swift */,
+				E05AA0DA2B41FFC2006ACDD8 /* AutomationInstructionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +195,95 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E05AA0DE2B4224EB006ACDD8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E05AA0E12B422511006ACDD8 /* Model */,
+				E05AA0E02B422508006ACDD8 /* ViewModel */,
+				E05AA0DF2B4224F4006ACDD8 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E05AA0DF2B4224F4006ACDD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0D26C3D2B2A031B0013F6AE /* HomeView.swift */,
+				E05AA0EE2B42F846006ACDD8 /* ChargingView.swift */,
+				E05AA0EC2B42F0CA006ACDD8 /* SettingsButtonView.swift */,
+				E05AA0F02B42F8CE006ACDD8 /* TextClockView.swift */,
+				E05AA0F22B42F932006ACDD8 /* DateView.swift */,
+				E05AA0F42B42F9C3006ACDD8 /* NoteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E05AA0E02B422508006ACDD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E05AA0E22B422535006ACDD8 /* DisplayViewModel.swift */,
+				E05AA0E42B42EE0C006ACDD8 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E05AA0E12B422511006ACDD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E05AA0E62B42EFD2006ACDD8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E05AA0E72B42EFDB006ACDD8 /* ViewModel */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E05AA0E72B42EFDB006ACDD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E05AA0E82B42EFEE006ACDD8 /* FontViewModel.swift */,
+				E05AA0EA2B42F014006ACDD8 /* StatusBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E05AA0F82B43046A006ACDD8 /* AnalogClock */ = {
+			isa = PBXGroup;
+			children = (
+				E05AA0FB2B43048A006ACDD8 /* ViewModel */,
+				E05AA0FA2B430488006ACDD8 /* Model */,
+				E05AA0F92B430487006ACDD8 /* View */,
+			);
+			path = AnalogClock;
+			sourceTree = "<group>";
+		};
+		E05AA0F92B430487006ACDD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E07303572B2CAD9400D87A42 /* AnalogClockView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E05AA0FA2B430488006ACDD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E05AA0FB2B43048A006ACDD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E05AA0FC2B430516006ACDD8 /* AnalogClockViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E07303562B2C910600D87A42 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +295,6 @@
 		E0D26C2F2B2A031B0013F6AE = {
 			isa = PBXGroup;
 			children = (
-				E01747DA2B40CEE600822FFA /* Views */,
-				E01747D52B40507C00822FFA /* Extensions */,
 				E0D26C3A2B2A031B0013F6AE /* desk-fella */,
 				E0D26C4B2B2A031D0013F6AE /* desk-fellaTests */,
 				E0D26C552B2A031D0013F6AE /* desk-fellaUITests */,
@@ -175,6 +315,9 @@
 		E0D26C3A2B2A031B0013F6AE /* desk-fella */ = {
 			isa = PBXGroup;
 			children = (
+				E05AA0E62B42EFD2006ACDD8 /* Core */,
+				E01747D52B40507C00822FFA /* Extensions */,
+				E01747DA2B40CEE600822FFA /* Views */,
 				E07303562B2C910600D87A42 /* Constants */,
 				E0D26C3B2B2A031B0013F6AE /* DeskFellaApp.swift */,
 				E0D26C3F2B2A031C0013F6AE /* Assets.xcassets */,
@@ -349,14 +492,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05AA0C72B41FB1E006ACDD8 /* ShowChargingView.swift in Sources */,
+				E05AA0D72B41FF2B006ACDD8 /* ChangeFontView.swift in Sources */,
+				E05AA0CB2B41FDD7006ACDD8 /* ShowSecondsView.swift in Sources */,
+				E05AA0EF2B42F846006ACDD8 /* ChargingView.swift in Sources */,
 				E01747D72B40509500822FFA /* DateFormatter.swift in Sources */,
+				E05AA0D32B41FEAA006ACDD8 /* ShowStatusBarView.swift in Sources */,
 				E073035D2B2CDC3000D87A42 /* SettingsView.swift in Sources */,
-				E0D26C3E2B2A031B0013F6AE /* ContentView.swift in Sources */,
+				E0D26C3E2B2A031B0013F6AE /* HomeView.swift in Sources */,
+				E05AA0CD2B41FDFB006ACDD8 /* ShowMinuteView.swift in Sources */,
+				E05AA0E32B422535006ACDD8 /* DisplayViewModel.swift in Sources */,
+				E05AA0DB2B41FFC2006ACDD8 /* AutomationInstructionView.swift in Sources */,
 				E0D26C3C2B2A031B0013F6AE /* DeskFellaApp.swift in Sources */,
 				E07303552B2C90D500D87A42 /* Constants.swift in Sources */,
+				E05AA0D12B41FE5E006ACDD8 /* ShowAnalogClockView.swift in Sources */,
+				E05AA0D52B41FEE6006ACDD8 /* EditNoteView.swift in Sources */,
 				E01747D92B40528300822FFA /* NumberFormatter.swift in Sources */,
+				E05AA0C92B41FD9E006ACDD8 /* ShowDateView.swift in Sources */,
+				E05AA0E52B42EE0C006ACDD8 /* HomeViewModel.swift in Sources */,
 				E07303582B2CAD9400D87A42 /* AnalogClockView.swift in Sources */,
+				E05AA0EB2B42F014006ACDD8 /* StatusBarViewModel.swift in Sources */,
+				E05AA0ED2B42F0CA006ACDD8 /* SettingsButtonView.swift in Sources */,
+				E05AA0E92B42EFEE006ACDD8 /* FontViewModel.swift in Sources */,
+				E05AA0F12B42F8CE006ACDD8 /* TextClockView.swift in Sources */,
+				E05AA0CF2B41FE3C006ACDD8 /* ShowHourView.swift in Sources */,
+				E05AA0F32B42F932006ACDD8 /* DateView.swift in Sources */,
+				E05AA0D92B41FF8E006ACDD8 /* DiscordInvitationView.swift in Sources */,
+				E05AA0F52B42F9C3006ACDD8 /* NoteView.swift in Sources */,
 				E01747E32B40CFD100822FFA /* SettingsViewModel.swift in Sources */,
+				E05AA0FD2B430516006ACDD8 /* AnalogClockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
